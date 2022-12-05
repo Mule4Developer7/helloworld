@@ -11,13 +11,14 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<flow name="hellowworld_gitdemoFlow" doc:id="f657821d-5406-4676-9a39-7c52fa930ea6" >
 		<http:listener doc:name="Listener" doc:id="5cccc19d-8e3f-4a5a-a91f-f031c8f8b1f7" path="/greetings" config-ref="HTTP_Listener_config"/>
 		<logger level="INFO" doc:name="Logger" doc:id="7e445e37-d35a-4b09-b45f-435867f809c1" message="==========start"/>
+		<logger level="INFO" doc:name="middle Logger" doc:id="3a5cf451-5975-489e-a648-6877ca5b9a85" message="======================mid logger"/>
 		<ee:transform doc:name="Transform Message" doc:id="6d450bff-2de0-439e-902f-8b950e4b4184" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
 ---
 {
-	"message" : "welcome to training"
+	"message" : "welcome to training of github repostory"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
